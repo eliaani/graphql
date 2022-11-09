@@ -5,7 +5,7 @@ import {
   gql,
 } from "@apollo/client";
 
-const GET_JOBS = gql`  
+const GET_COUNTRIES = gql`  
   query GetCountries {
     countries {
       code,
@@ -16,7 +16,7 @@ const GET_JOBS = gql`
 `;
 
 function App() {
-  const { loading, error, data } = useQuery(GET_JOBS);
+  const { loading, error, data } = useQuery(GET_COUNTRIES);
   if (loading) return<p>Loading...</p>
   else if (error) return <p>Error...</p>
   else { 
